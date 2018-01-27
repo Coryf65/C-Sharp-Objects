@@ -21,15 +21,7 @@ namespace TreehouseDefense
                         new MapLocation(6, 2, map),
                         new MapLocation(7, 2, map)
                     }
-                );
-
-                MapLocation location = path.GetLocationAt(0);
-
-                if (location != null)
-                {
-                    Console.WriteLine( location.X + "," + location.Y );
-
-                }
+                );               
 
             }
 
