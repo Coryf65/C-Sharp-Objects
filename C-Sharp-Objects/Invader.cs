@@ -5,33 +5,26 @@ namespace TreehouseDefense
 
         private MapLocation _location;
 
-        //// Methods
-        //// Getter
-        //public MapLoaction GetLocation()
-        //{
-        //    return _loaction;
-        //}
+        // Shorthanded way vs the whole other way
+        public MapLocation Location { get; private set; }
         
-        //// Setter 
-        //public void SetLocation(MapLocation value)
+
+        
+        //// Properties -- use encapsulation they are preffered getter and setter styles
+        //public MapLocation Loacation
         //{
-        //    _locaiton = value;
+        //    // Getter
+        //    get
+        //    {
+        //        return _location;
+        //    }
+
+        //    // Setter
+        //    // Common to have a private setter not a private getter
+        //    private set
+        //    {
+        //        _location = value;
+        //    }
         //}
-
-        // Properties -- use encapsulation they are preffered getter and setter styles
-        public MapLocation Loacation
-        {
-            // Getter
-            get
-            {
-                return _location;
-            }
-
-            // Setter
-            set
-            {
-                _location = value;
-            }
-        }
     }
 }
