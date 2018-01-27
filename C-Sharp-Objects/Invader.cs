@@ -5,14 +5,33 @@ namespace TreehouseDefense
 
         private MapLocation _location;
 
-        public MapLoaction GetLocation()
-        {
-            return Loaction;
-        }
+        //// Methods
+        //// Getter
+        //public MapLoaction GetLocation()
+        //{
+        //    return _loaction;
+        //}
         
-        public void SetLocation(MapLocation value)
+        //// Setter 
+        //public void SetLocation(MapLocation value)
+        //{
+        //    _locaiton = value;
+        //}
+
+        // Properties -- use encapsulation they are preffered getter and setter styles
+        public MapLocation Loacation
         {
-            _locaiton = value;
+            // Getter
+            get
+            {
+                return _location;
+            }
+
+            // Setter
+            set
+            {
+                _location = value;
+            }
         }
     }
 }
