@@ -3,26 +3,29 @@ namespace TreehouseDefense
     class Invader
     {
 
+        /* Refactoring this class with more
+         * 'Syntatic Sugar' = or more condensed code
+         * Properties always return a value
+         * 
+         */
+
         private readonly Path _path;
         private int _pathStep = 0;
 
-        //NOW a computed Property ...
-        // replaces the property that has a field, a getter, and a setter
-        // the user of this property does not need to know that the location 
-        //of this property is computed from the _path and the _pathstep field
-        // all they need to know is that they can type invader.location and 
-        // get the location of the invader on the map
 
-            // Properties should do simple things LIKLE getting and setting data
-            
-        public MapLocation Location
-        {
-            get
-            {
-                return _path.GetLocationAt(_pathStep);
-            }
+        //public MapLocation Location
+        //{
+        //    get
+        //    {
+        //        return _path.GetLocationAt(_pathStep);
+        //    }
 
-        }
+        //}
+
+        // This only works with Computed Properties
+        // Condensed into ...
+        public MapLocation Location => _pathStep.GetLocationAt(_pathStep);
+
 
         public Invader( Path path )
         {
@@ -30,11 +33,15 @@ namespace TreehouseDefense
         
         }
 
-        public void Move()
-        {
-            _pathStep += 1; 
-         
-        }
+        //public void Move()
+        //{
+        //    _pathStep += 1; 
+
+        //}
+
+        // Works for Methods has() which means Method
+        // Condensed into ...
+        public void Move() => _pathStep += 1;
 
 
     }
