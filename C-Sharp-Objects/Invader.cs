@@ -3,27 +3,17 @@ namespace TreehouseDefense
     class Invader
     {
 
-        /* Refactoring this class with more
-         * 'Syntatic Sugar' = or more condensed code
-         * Properties always return a value
-         * 
-         */
+        /**
+         *  Challenger Approaching !!!!!!!
+         * Give the Invader's Health, be disabled, health remaining 
+         * hit and decrement helath
+         * **/
 
+        private int _Health = 10;
         private readonly Path _path;
         private int _pathStep = 0;
+        private string _missShot = "0";
 
-
-        //public MapLocation Location
-        //{
-        //    get
-        //    {
-        //        return _path.GetLocationAt(_pathStep);
-        //    }
-
-        //}
-
-        // This only works with Computed Properties
-        // Condensed into ...
         public MapLocation Location => _pathStep.GetLocationAt(_pathStep);
 
 
@@ -33,16 +23,11 @@ namespace TreehouseDefense
         
         }
 
-        //public void Move()
-        //{
-        //    _pathStep += 1; 
-
-        //}
-
-        // Works for Methods has() which means Method
-        // Condensed into ...
         public void Move() => _pathStep += 1;
 
+        // when a tower hits the invader
+        public void HitSuccess() => _Health -= 1;
 
+        public string HitFailed => _missShot;
     }
 }
