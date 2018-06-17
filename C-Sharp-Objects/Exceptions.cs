@@ -1,18 +1,18 @@
-namespace TreehouseDefense
+namespace C_Sharp_Objects
 {
-    class TreehouseDefenseException : System.Exception
+    class C_Sharp_ObjectsException : System.Exception
     {
-        public TreehouseDefenseException()
+        public C_Sharp_ObjectsException()
         {
         }
         
-        public TreehouseDefenseException(string message) : base(message)
+        public C_Sharp_ObjectsException(string message) : base(message)
         {
         }
         
     }
     
-    class OutOfBoundsException : TreehouseDefenseException
+    class OutOfBoundsException : C_Sharp_ObjectsException
     {
         public OutOfBoundsException()
         {

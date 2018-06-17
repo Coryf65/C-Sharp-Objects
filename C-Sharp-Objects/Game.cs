@@ -1,6 +1,6 @@
 using System;
 
-namespace TreehouseDefense
+namespace C_Sharp_Objects
 {
     class Game
     {
@@ -32,9 +32,9 @@ namespace TreehouseDefense
                 Console.WriteLine(ex.Message);
             }
 
-            catch (TreehouseDefenseException)
+            catch (C_Sharp_ObjectsException)
             {
-                Console.WriteLine("Unhandled TreehouseDefenseException");
+                Console.WriteLine("Unhandled C_Sharp_ObjectsException");
             }
 
             catch (Exception ex)//will catch all exceptions

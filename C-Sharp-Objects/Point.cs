@@ -1,6 +1,6 @@
 using System;
 
-namespace TreehouseDefense
+namespace C_Sharp_Objects
 {
     class Point
     {
