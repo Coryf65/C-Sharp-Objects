@@ -13,32 +13,16 @@ namespace C_Sharp_Objects
         public void FireOnInvaders(Invader[] invaders)
         {
 
-            /*
-             * Using a While vs a For loop
-             */
-
-            //int index = 0;
-
-            //while (index < invaders.Length)
-            //{
-            //    Invader invader = invaders[index];
-            //    // Do stuff with the invader
-
-            //    index++;
-            //}
-
-
-            // similar to a while loop
-            //for (int i = 0; i < invaders.Length; i++)
-            //{
-            //    Invader invader = invaders[i];
-            //    // Do Stuff
-            //}
-
             //loop through each item in the collection
             foreach (Invader invader in invaders)
             {
                 // Do stuff
+                // 1 is the grid size
+                if (invader.IsActive && _loaction.InRangeOf(invader.Location, 1))
+                {
+                    invader.DecreaseHealth(1);
+                    break;
+                }
             }
         }
 
