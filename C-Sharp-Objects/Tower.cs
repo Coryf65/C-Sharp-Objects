@@ -11,6 +11,7 @@ namespace C_Sharp_Objects
         // Because this is static there can only be one of these no matter how many towers are created
         private static readonly Random _random = new Random();
 
+        // Every Tower object on the map can have a different location on the map
         private readonly MapLocation _loaction;
 
         public Tower(MapLocation location)
