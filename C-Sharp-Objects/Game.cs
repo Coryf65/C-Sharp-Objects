@@ -10,6 +10,7 @@ namespace C_Sharp_Objects
 
             try
             {
+                // Test data for these objects (hard coded values)
                 Path path = new Path(
                     new[] {
                         new MapLocation(0, 2, map),
@@ -21,7 +22,31 @@ namespace C_Sharp_Objects
                         new MapLocation(6, 2, map),
                         new MapLocation(7, 2, map)
                     }
-                );               
+                );
+
+                Invader[] invaders = 
+                {
+                    new Invader(path),
+                    new Invader(path),
+                    new Invader(path),
+                    new Invader(path)
+                };
+
+                Tower[] towers =
+                {
+                    new Tower(new MapLocation(1, 3, map)),
+                    new Tower(new MapLocation(2, 2, map)),
+                    new Tower(new MapLocation(5, 3, map))
+                };
+
+                Level level = new Level(invaders)
+                {
+                    Towers = towers
+                };
+
+                bool PlayerWon = level.Play();
+
+                Console.WriteLine("Player " + (PlayerWon? "Won" : "Lost"));
 
             }
 

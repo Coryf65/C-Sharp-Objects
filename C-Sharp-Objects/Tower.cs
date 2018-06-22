@@ -1,3 +1,5 @@
+using System;
+
 namespace C_Sharp_Objects
 {
     class Tower
@@ -5,6 +7,10 @@ namespace C_Sharp_Objects
         //Constant where you cannot change the value after declaration
         private const int _RANGE = 1;
         private const int _POWER = 1;
+
+        // Because this is static there can only be one of these no matter how many towers are created
+        private static readonly Random _random = new Random();
+
         private readonly MapLocation _loaction;
 
         public Tower(MapLocation location)

@@ -8,6 +8,7 @@ namespace C_Sharp_Objects
          **/
 
         private int _pathStep = 0;
+
         private readonly Path _path;
        
 
