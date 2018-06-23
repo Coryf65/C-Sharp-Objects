@@ -65,6 +65,7 @@ namespace C_Sharp_Objects
             catch (Exception ex)//will catch all exceptions
             {
                 Console.WriteLine("Unhandled Exception" + ex);
+                
             }
         }
     }
