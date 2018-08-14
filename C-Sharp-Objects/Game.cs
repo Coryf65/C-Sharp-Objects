@@ -26,7 +26,7 @@ namespace C_Sharp_Objects
 
                 Invader[] invaders = 
                 {
-                    new Invader(path),
+                    new ShieldedInvader(path),
                     new Invader(path),
                     new Invader(path),
                     new Invader(path)

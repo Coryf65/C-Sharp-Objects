@@ -1,3 +1,5 @@
+using System;
+
 namespace C_Sharp_Objects
 {
     class Invader
@@ -35,9 +37,12 @@ namespace C_Sharp_Objects
         public void Move() => _pathStep += 1;
 
         // a way to decrease health
-        public void DecreaseHealth(int factor)
+        //Now a Virtual Method so sub classes can implement this in different ways
+        public virtual void DecreaseHealth(int factor)
         {
             Health -= factor;
+            Console.WriteLine("Shot and HIT an Invader");
+
         }
     }
 }

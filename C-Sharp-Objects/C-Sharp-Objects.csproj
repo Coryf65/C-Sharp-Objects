@@ -51,6 +51,7 @@
     <Compile Include="Path.cs" />
     <Compile Include="Point.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShieldedInvader.cs" />
     <Compile Include="Tower.cs" />
   </ItemGroup>
   <ItemGroup>

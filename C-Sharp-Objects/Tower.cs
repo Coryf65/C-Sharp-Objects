@@ -39,7 +39,7 @@ namespace C_Sharp_Objects
                     if (IsSuccessfulShot())
                     {
                         invader.DecreaseHealth(_POWER);
-                        Console.WriteLine("Shot and HIT an Invader");
+                        
                         if (invader.IsNeutralized)
                         {
                             Console.WriteLine("Target Down");
