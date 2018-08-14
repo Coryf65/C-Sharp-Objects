@@ -5,9 +5,14 @@ namespace C_Sharp_Objects
     class Tower
     {
         //Constant where you cannot change the value after declaration
-        private const int _RANGE = 1;
-        private const int _POWER = 1;
-        private const double _ACCURACY = .75;
+        //private const int _RANGE = 1;
+        //private const int _POWER = 1;
+        //private const double _ACCURACY = .75;
+
+        //Changed our Constants to Properties
+        protected virtual int Range { get; } = 1;
+        protected virtual int Power { get; } = 1;
+        protected virtual double Accuracy { get; } = .75;
 
         // Because this is static there can only be one of these no matter how many towers are created
         private static readonly Random _random = new Random();
@@ -22,7 +27,7 @@ namespace C_Sharp_Objects
 
         public bool IsSuccessfulShot()
         {
-            return Tower._random.NextDouble() < _ACCURACY;
+            return Tower._random.NextDouble() < Accuracy;
         }
         
         public void FireOnInvaders(Invader[] invaders)
@@ -34,11 +39,11 @@ namespace C_Sharp_Objects
                
                 // Do stuff
                 // 1 is the grid size
-                if (invader.IsActive && _loaction.InRangeOf(invader.Location, _RANGE))
+                if (invader.IsActive && _loaction.InRangeOf(invader.Location, Range))
                 {
                     if (IsSuccessfulShot())
                     {
-                        invader.DecreaseHealth(_POWER);
+                        invader.DecreaseHealth(Power);
                         
                         if (invader.IsNeutralized)
                         {
