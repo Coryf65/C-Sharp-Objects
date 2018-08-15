@@ -6,7 +6,10 @@ namespace C_Sharp_Objects
         {
             if (!map.OnMap(this))
             {
-                throw new OutOfBoundsException(x + "," + y + " is outside the boundaries of the map.");
+                //Streamlined it
+                //throw new OutOfBoundsException(x + "," + y + " is outside the boundaries of the map.");
+
+                throw new OutOfBoundsException(this + " is outside the boundaries of the map.");
             }
         }
 

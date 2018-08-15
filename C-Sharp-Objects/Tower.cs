@@ -47,7 +47,7 @@ namespace C_Sharp_Objects
                         
                         if (invader.IsNeutralized)
                         {
-                            Console.WriteLine("Target Down");
+                            Console.WriteLine("Target Down at: " + invader.Location);
                         }
                     }else
                     {
