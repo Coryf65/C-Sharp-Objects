@@ -20,5 +20,20 @@ namespace C_Sharp_Objects
 
         }
 
+        // Determines if a location is on the path
+        public bool IsOnPath(MapLocation location)
+        {
+            foreach (var pathLocation in _path)
+            {
+                // the double equal sign checks for reference equality
+                // same as using ReferenceEquals(Object, Object)
+                if (location == pathLocation)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
     }
 }
