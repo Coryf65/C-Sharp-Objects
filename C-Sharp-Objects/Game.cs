@@ -34,7 +34,7 @@ namespace C_Sharp_Objects
 
                 Tower[] towers =
                 {
-                    new Tower(new MapLocation(1, 3, map)),
+                    new SniperTower(new MapLocation(1, 3, map)),
                     new Tower(new MapLocation(2, 2, map)),
                     new Tower(new MapLocation(5, 3, map))
                 };
