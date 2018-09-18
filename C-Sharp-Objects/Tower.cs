@@ -30,11 +30,11 @@ namespace C_Sharp_Objects
             return Tower._random.NextDouble() < Accuracy;
         }
         
-        public void FireOnInvaders(Invader[] invaders)
+        public void FireOnInvaders(InvaderBase[] invaders)
         {
 
             //loop through each item in the collection
-            foreach (Invader invader in invaders)
+            foreach (InvaderBase invader in invaders)
             {
                
                 // Do stuff

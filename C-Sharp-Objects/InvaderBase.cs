@@ -45,7 +45,7 @@ namespace C_Sharp_Objects
 
         public bool IsActive => !(IsNeutralized || HasScored);
 
-        public Invader( Path path )
+        public InvaderBase( Path path )
         {
             _path = path;
 
