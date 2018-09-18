@@ -39,6 +39,16 @@ namespace C_Sharp_Objects
             return this.X == that.X && this.Y == that.Y;
         }
 
+        /// <summary>
+        ///  creating a unique hashcode
+        /// </summary>
+        /// <returns></returns>        
+        public override int GetHashCode()
+        {
+
+            return X.GetHashCode() * 31 + Y.GetHashCode();
+        }
+
         public int DistanceTo(int x, int y)
         {
             return (int)Math.Sqrt(Math.Pow(X-x, 2) + Math.Pow(Y-y, 2));
