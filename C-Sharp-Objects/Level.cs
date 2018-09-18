@@ -8,12 +8,12 @@ namespace C_Sharp_Objects
 {
     class Level
     {
-        private readonly InvaderBase[] _invaders;
+        private readonly IInvader[] _invaders;
 
         public Tower[] Towers { get; set; }
 
         //when creating a level, pass in how many invaders will be in the array
-        public Level(InvaderBase[] invaders)
+        public Level(IInvader[] invaders)
         {
             _invaders = invaders;
         }
@@ -35,7 +35,7 @@ namespace C_Sharp_Objects
                 // Count and move the invaderds that are still active
                 remainingInvaders = 0;
 
-                foreach (InvaderBase invader in _invaders)
+                foreach (IInvader invader in _invaders)
                 {
                     if (invader.IsActive)
                     {
