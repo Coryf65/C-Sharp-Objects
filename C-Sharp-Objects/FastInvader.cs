@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace C_Sharp_Objects
 {
-    class FastInvader : Invader 
+    class FastInvader : InvaderBase
     {
         //Property
         protected override int StepSize { get; } = 2;

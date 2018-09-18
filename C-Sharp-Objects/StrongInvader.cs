@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace C_Sharp_Objects
 {
-    class StrongInvader : Invader
+    class StrongInvader : InvaderBase
     {
         // property
         public override int Health { get; protected set; } = 2;

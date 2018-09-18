@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace C_Sharp_Objects
 {
     //going to display Polymorphism
-    class ShieldedInvader : Invader  //Inheriting the Base Class Invader
+    class ShieldedInvader : InvaderBase  //Inheriting the Base Class Invader
     {
 
         // static random instance

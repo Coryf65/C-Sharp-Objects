@@ -2,7 +2,8 @@ using System;
 
 namespace C_Sharp_Objects
 {
-    class Invader
+    // changed to an abstract method
+    abstract class InvaderBase
     {
 
         /// <summary>
