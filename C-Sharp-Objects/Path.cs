@@ -27,7 +27,7 @@ namespace C_Sharp_Objects
             {
                 // the double equal sign checks for reference equality
                 // same as using ReferenceEquals(Object, Object)
-                if (location == pathLocation)
+                if (location.Equals(pathLocation))
                 {
                     return true;
                 }
