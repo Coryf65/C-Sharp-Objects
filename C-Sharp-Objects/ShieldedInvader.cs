@@ -13,6 +13,8 @@ namespace C_Sharp_Objects
         // static random instance
         private static System.Random _random = new System.Random();
 
+        public override int Health { get; protected set; } = 2;
+
         public ShieldedInvader(Path path) : base(path) //Constructor pass the path parametyer to the base class
         {
             DecreaseHealth(0);

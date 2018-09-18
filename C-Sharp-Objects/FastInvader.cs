@@ -11,6 +11,9 @@ namespace C_Sharp_Objects
         //Property
         protected override int StepSize { get; } = 2;
 
+        //overriding the abstract method and setting the healthg to a default
+        public override int Health { get; protected set; } = 2;
+
         //Constructor
         public FastInvader(Path path) : base(path) // Inherit the base class and pass into the base the path
         {

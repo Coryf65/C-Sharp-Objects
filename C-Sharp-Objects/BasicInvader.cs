@@ -8,6 +8,9 @@ namespace C_Sharp_Objects
 {
     class BasicInvader : InvaderBase
     {
+
+        public override int Health { get; protected set; } = 2;
+
         public BasicInvader(Path path) : base(path)
         {
 
