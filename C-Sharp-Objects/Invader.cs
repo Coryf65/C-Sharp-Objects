@@ -5,9 +5,18 @@ namespace C_Sharp_Objects
     class Invader
     {
 
-        /**
-         *  Adding some more proerties that will be useful
-         **/
+        /// <summary>
+        ///  Base Invader Class
+        ///  has some interfaces that we expose to other classes so they can interact with this one
+        ///  We override how these sub classes behave by using Polymorphism
+        ///  Location
+        ///  HasScored
+        ///  Health
+        ///  IsNeutralized
+        ///  IsActive
+        ///  Move()
+        ///  DecreaseHealth()
+        /// </summary>
 
         private int _pathStep = 0;
 
