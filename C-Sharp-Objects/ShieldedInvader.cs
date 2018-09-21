@@ -10,9 +10,6 @@ namespace C_Sharp_Objects
     class ShieldedInvader : InvaderBase  //Inheriting the Base Class Invader
     {
 
-        // static random instance
-        private static System.Random _random = new System.Random();
-
         public override int Health { get; protected set; } = 2;
 
         public ShieldedInvader(Path path) : base(path) //Constructor pass the path parametyer to the base class
@@ -24,7 +21,7 @@ namespace C_Sharp_Objects
         public override void DecreaseHealth(int factor)
         {
             // the invader will be hit approx 50% of the time
-            if (_random.NextDouble() < .5)
+            if (Random.NextDouble() < .5)
             {
                 // when it hits use the base class DecraseHealth no need to re-invent the wheel!
                 base.DecreaseHealth(factor);

@@ -15,7 +15,12 @@ namespace C_Sharp_Objects
         protected virtual double Accuracy { get; } = .75;
 
         // Because this is static there can only be one of these no matter how many towers are created
-        private static readonly Random _random = new Random();
+        //Static Field
+
+        // trying to use our own random class
+        //private static readonly System.Random _random = new System.Random();
+
+        
 
         // Every Tower object on the map can have a different location on the map
         private readonly MapLocation _loaction;
@@ -27,7 +32,7 @@ namespace C_Sharp_Objects
 
         public bool IsSuccessfulShot()
         {
-            return Tower._random.NextDouble() < Accuracy;
+            return Random.NextDouble() < Accuracy;
         }
         
         public void FireOnInvaders(IInvader[] invaders)
