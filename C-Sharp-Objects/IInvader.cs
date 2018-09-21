@@ -16,7 +16,7 @@ namespace C_Sharp_Objects
 
     interface IInvader : IMappable, IMovable
     {          
-        
+        // True if the invader has reached the end of the path
         bool HasScored { get; }
         
         int Health { get; }
@@ -26,8 +26,7 @@ namespace C_Sharp_Objects
         bool IsActive { get; }
 
         void DecreaseHealth(int factor);
-
-
+        
     }
   
 }
